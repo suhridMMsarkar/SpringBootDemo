@@ -1,4 +1,4 @@
-package com.datasoft.spring_demo;
+package com.datasoft.spring.training.jdbcdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringDemoApplicationTests {
+public class JdbcdemoApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
