@@ -17,6 +17,8 @@ import java.util.List;
 public class TestCityDao {
     @Autowired
     private CityDao cityDao;
+    @Autowired
+    private ConstructorAutowiring constructorAutowiring;
 
     @Test
     @Ignore
@@ -40,9 +42,15 @@ public class TestCityDao {
 
     @Test
     public void findById() {
-        City city = cityDao.findById(4081);
+        City city = cityDao.findById(81);
         if (city != null) {
             log.info(city.toString());
         }
+    }
+
+    @Test
+    public void isValid() {
+        log.info(String.valueOf(constructorAutowiring.getJdbcTemplate() != null));
+        log.info(String.valueOf(constructorAutowiring.getCityDao() != null));
     }
 }
